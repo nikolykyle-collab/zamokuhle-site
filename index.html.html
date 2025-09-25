@@ -138,108 +138,54 @@
     <a class="donate" href="zwyp.png" target="_blank">DONATE NOW</a>
   </div>
 
- <div class="brandnav">
+  <!-- brand and nav -->
+  <div class="brandnav">
     <h1>Zamokuhlewyp</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html" class="active">About</a></li>
-        <li><a href="Services.html">Services</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="programs.html">Programs</a></li>
       </ul>
     </nav>
   </div>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zamokuhle WYP - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --teal:#065a83;
-      --dark-teal:#0b5a84;
-      --accent:#f5a100;
-    }
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      font-family:'Open Sans',system-ui,Arial;
-      color:#fff;
-      background: linear-gradient(180deg, var(--teal), var(--dark-teal));
-    }
 
-    /* hero */
-    .hero{
-      position: relative;
-      height:520px;min-height:420px;
-      display:flex;align-items:center;justify-content:center;
-      text-align:center;
-      padding:0 20px;
-      background:linear-gradient(rgba(10,15,44,0.7),rgba(10,15,44,0.7)),
-                 url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-      overflow:visible;
-    }
-    .hero::after{
-      content:'';position:absolute;inset:0;
-      background:linear-gradient(180deg,rgba(9,20,37,0.55),rgba(9,20,37,0.75));
-      z-index:1;
-    }
-    .hero-content{position:relative;z-index:2;max-width:700px;}
-    .hero h2{font-family:'Montserrat';font-size:36px;margin:0 0 12px;color:#ff99cc;}
-    .hero p{font-size:18px;margin-bottom:25px;color:#fff;}
-    .btn{
-      display:inline-block;background:#ff99cc;color:#0a0f2c;
-      padding:12px 25px;border-radius:30px;text-decoration:none;font-weight:bold;transition:0.3s;
-    }
-    .btn:hover{background:#fff;color:#0a0f2c;}
-    .hero-reflection{
-      position:absolute;bottom:-50%;left:0;width:100%;height:100%;
-      background:inherit;background-size:cover;background-position:center center;
-      transform:scaleY(-1);opacity:0.3;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-      z-index:1;
-    }
-
-    /* main content */
-    main{
-      max-width:800px;margin:0 auto;padding:40px 20px;text-align:center;
-    }
-    main h2{font-size:32px;margin-bottom:12px;}
-    main p{font-size:16px;line-height:1.6;color:#fff;margin-bottom:18px;}
-
-    footer{padding:26px 36px;text-align:center;color:#fff;}
-  </style>
-</head>
-<body>
-
-  <!-- hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Together for a Better Tomorrow</h2>
-      <p>Empowering women, youth, and communities since 2004.</p>
-	<a href="contact.html" class="btn">Get Involved</a>
-
+  <!-- hero with background and reflection -->
+  <section class="hero" style="background-image:url('example.jpg')">
+    <div class="hero-inner">
+      <h2>Zamokuhle Women and Youth Projects also known as</h2>
+      <div class="bigabbr">ZWYP</div>
+      <p>ZWYP works with other civic organisations, government departments and agencies as well as private sectors to maximize impact, synergy and collaboration for the benefit of the communities we identify to serve.</p>
     </div>
     <div class="hero-reflection"></div>
   </section>
 
+  <!-- main sections -->
   <main>
     <section>
-      <h2>About Us</h2>
-      <p>Zamokuhle Women and Youth Projects (ZWYP) is a non-profit organisation formed in 2004 by women volunteering to provide services to vulnerable groups through donations of time, food, clothes, and other essential amenities.</p>
-      <p>This service expanded across districts to include food gardens, agricultural projects such as chicken farming, youth enterprise development, business management, and support services.</p>
-      <p>Our current focus is a rural empowerment project addressing economic, health, and social challenges. ZWYP collaborates with civic organisations, government agencies, and private sectors to maximize impact and benefit the communities we serve.</p>
+      <h2>Vision Statement</h2>
+      <p>ZWYP will be a high-quality provider of a passionate and caring service, based on the needs of the individuals, families and communities driven by advocacy for humanitarian needs. We will contribute as individuals and families to a healthy community that ensures our safety and security.</p>
+    </section>
+
+    <section>
+      <h2>Mission</h2>
+      <p>Our mission is to enable the provision of care and support to those in need, based on quality, passion and advocacy for human rights. We aim to conduct research to identify sources of discomfort and work together to find amicable relief or solutions on a sustainable basis. We endeavor to enable the provision of awareness, training and capacity building for effective results.</p>
     </section>
   </main>
 
+  <!-- floating chat + contact -->
+  <div class="chat-dot">💬</div>
+  <a class="contact-pill" href="mailto:info@zamokulewyp.org">Contact us</a>
+
+  <!-- footer -->
   <footer>
-    &copy; 2025 Zamokuhle Women and Youth Projects (ZWYP). All Rights Reserved.
+    <small>&copy; <span id="year"></span> Zamokuhle Women and Youth Projects</small>
   </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
